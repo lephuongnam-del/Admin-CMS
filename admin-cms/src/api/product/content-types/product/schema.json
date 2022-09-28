@@ -23,6 +23,18 @@
     },
     "unit": {
       "type": "string"
+    },
+    "product_detail": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product-detail.product-detail",
+      "inversedBy": "product"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "products"
     }
   }
 }
